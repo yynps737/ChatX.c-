@@ -47,11 +47,16 @@ module.exports = {
   ],
   devtool: prod ? false : 'source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
     port: 5000,
-    proxy: {
-      '/api': 'http://localhost:9001',
-      '/health': 'http://localhost:9001'
-    }
+    proxy: [
+      {
+        context: ['/api', '/health'],
+        target: 'http://localhost:9001',
+      }
+    ],
+    hot: true
   }
 };
