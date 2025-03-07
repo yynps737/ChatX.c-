@@ -1,45 +1,35 @@
-# 常规文件
-.DS_Store
-*.log
-*.swp
-*~
-*.bak
-
-# 编译产出物
+# 编译产物
+build/
+dist/
+node_modules/
+.cache/
 *.o
-*.obj
 *.a
-*.lib
 *.so
+*.exe
 *.dll
 *.dylib
-*.exe
-*.out
 
-# 编译目录
-build/
-*/build/
-dist/
-backend/data/*.db
-
-# 依赖目录
-node_modules/
-frontend/node_modules/
-
-# 环境配置
-*.env
-.env*
-!.env.example
-
-# IDE 和编辑器配置
-.idea/
+# 编辑器和 IDE 文件
 .vscode/
-!.vscode/extensions.json
-!.vscode/settings.json.example
-*.sublime-*
-*.code-workspace
+.idea/
+*.swp
+*.swo
+*~
 
-# 临时文件
-temp/
-tmp/
-.cache/
+# 环境文件
+.env
+.env.local
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 日志文件
+*.log
+logs/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
