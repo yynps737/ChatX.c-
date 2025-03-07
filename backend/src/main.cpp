@@ -1,5 +1,6 @@
 // 优化后的main.cpp
 #include <iostream>
+#include <filesystem> // 用于 std::filesystem 功能
 #include "App.h"
 #include "handlers/AuthHandler.h"
 #include "handlers/ChatHandler.h"
